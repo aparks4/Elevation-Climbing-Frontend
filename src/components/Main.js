@@ -10,7 +10,7 @@ function Main() {
             <Outlet />
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/dashboard' element={<Dashboard />} />
+                <Route path='/videos' element={<Dashboard />} />
                 <Route path='/routes' element={<RouteIndex />} />
                 <Route path='/routes/:id' element={<RouteDetail />} />
             </Routes>

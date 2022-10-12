@@ -22,7 +22,7 @@ function RouteDetail() {
 
     const loaded = () => {
         return (
-            <div class="route-card">
+            <div className="route-card">
                 <h1>{route.color}{route.wall}</h1> 
                 <img src={route.img} alt={route.color} />
                 <p>{route.description}</p>

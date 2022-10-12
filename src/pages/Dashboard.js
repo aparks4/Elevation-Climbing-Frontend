@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-function Dashboard() {
+function Dashboard(props) {
     const [videos, setVideos] = useState([])
-    const URL = 'http://localhost:8000/videos'
+    const URL = 'http://localhost:8000/videos/'
 
-    const getVideos = async (videoData) => {
+    const getVideos = async () => {
         try {
-            const response = await fetch(URL)
+            const response = await fetch(URL);
             const allVideos = await response.json()
             setVideos(allVideos)
             console.log('set videos')
@@ -22,7 +22,7 @@ function Dashboard() {
     const loaded = () => {
         return videos?.map((video) => {
             return (
-                <div class="video-card">
+                <div className="video-card">
                     <video width="320" height="240" controls>
                         <source src={video.video} type="video/mp4" />
                         <source src={video.video} type="video/ogg" />

@@ -30,7 +30,7 @@ function RouteIndex(props) {
     const loaded = () => {
         return routes?.map((route) => {
             return (
-                <div class="route-card">
+                <div className="route-card">
                     <Link to={`/routes/${route.id}`}>{route.color}{route.wall}</Link>
                     <img alt={route.color} src={route.img} />
                     <p>{route.description}</p>
@@ -71,11 +71,11 @@ function RouteIndex(props) {
 
     return (
         <>
-            <div class="route-index-container">
+            <div className="route-index-container">
                 {routes && routes.length ? loaded() : loading()}
 
             </div>
-            <div class="create-form">
+            <div className="create-form">
                 <h2>Add a new route</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={newForm.color} name="color" placeholder="Color" onChange={handleChange} />
