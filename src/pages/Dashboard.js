@@ -29,7 +29,7 @@ function Dashboard(props) {
                         <source src={video.video} type="video/webm" />
                         Your browser does not surrport the video tag.
                     </video>
-                    <p>{video.user}: {video.comment}</p>
+                    <p>{video.comment}</p>
                 </div>
             )
         })
