@@ -9,11 +9,8 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(username, password, password2);
         registerUser(username, password, password2);
-    };
-
-    const handleChange = (e) => {
-        setUsername(e.target.value)
     };
 
 
@@ -22,13 +19,13 @@ function Register() {
             <h1>Register</h1>
             <form onSubmit={handleSubmit} className='register-form'>
                 <label htmlFor='username'>Username</label>
-                <input type='text' id='username' onChange={handleChange} placeholder='Username' required/>
+                <input type='text' id='username' onChange={e => setUsername(e.target.value)} placeholder='Username' required/>
                 <label htmlFor='password'>Password</label>
-                <input type='password' id='password' onChange={handleChange} placeholder='Password' required/>
+                <input type='password' id='password' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
                 <label htmlFor='confirm-password'>Confirm Password</label>
-                <input type='password' id='confirm-password' onChange={handleChange} placeholder='Confirm Password' required/>
+                <input type='password' id='confirm-password' onChange={e => setPassword2(e.target.value)} placeholder='Confirm Password' required/>
                 <p>{password2 !== password ? "Passwords do not match" : ""}</p>
-                <button>Register</button>
+                <button type='submit'>Register</button>
             </form>
         </div>
     )

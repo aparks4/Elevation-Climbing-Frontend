@@ -13,7 +13,6 @@ import Register from '../pages/Register';
 function Main() {
     return (
         <>
-            <AuthProvider>
             <Outlet />
             <Routes>
                 {/* <PrivateRoute component={ProtectedPage} path='/protected' exact /> */}
@@ -23,8 +22,8 @@ function Main() {
                 <Route path='/videos' element={<Dashboard />} />
                 <Route path='/routes' element={<RouteIndex />} />
                 <Route path='/routes/:id' element={<RouteDetail />} />
+                <Route path='/protected' element={<ProtectedPage />} />
             </Routes>
-            </AuthProvider>
         </>
     )
 }

@@ -47,14 +47,14 @@ function RouteIndex(props) {
         setNewForm({ ...newForm, [e.target.name]: e.target.value });
     }
 
-    const createRoute = async (routeData) => {
+    const createRoute = async (newForm) => {
         try {
             const newRoute = await fetch(BASE_URL, {
-                method: "post",
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(routeData),
+                body: JSON.stringify(newForm),
             });
             getRoutes();
         } catch(err) {

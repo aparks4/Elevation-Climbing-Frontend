@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
+import PrivateRoute from '../utils/PrivateRoute';
 
 
 function Nav() {
@@ -9,7 +10,6 @@ function Nav() {
     return(
         <nav>
             <div> 
-                NavBar
                 {user ? (
                     <>
                         <Link to='/'>Home</Link>
