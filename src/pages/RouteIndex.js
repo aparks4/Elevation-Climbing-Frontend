@@ -30,11 +30,14 @@ function RouteIndex(props) {
     const loaded = () => {
         return routes?.map((route) => {
             return (
+                <Link to={`/routes/${route.id}`}>
                 <div className="route-card">
-                    <Link to={`/routes/${route.id}`}>{route.color}{route.wall}</Link>
+                    <h2>{route.color}{route.wall}</h2>
                     <img alt={route.color} src={route.img} />
                     <p>{route.description}</p>
                 </div>
+                </Link>
+
             )
         })
     }
@@ -43,47 +46,12 @@ function RouteIndex(props) {
             <h1>Loading...</h1>
     }
 
-    const handleChange = (e) => {
-        setNewForm({ ...newForm, [e.target.name]: e.target.value });
-    }
-
-    const createRoute = async (newForm) => {
-        try {
-            const newRoute = await fetch(BASE_URL, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newForm),
-            });
-            getRoutes();
-        } catch(err) {
-            console.log(err);
-        }
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const newRoute = await createRoute();
-
-        setNewForm({ color: "", wall: "", img: "", description: "" })
-    }
-
     return (
         <>
             <div className="route-index-container">
+                <img height='550' width='600' src='https://i.imgur.com/QWmplAh.png' alt='elevation gym map' />
                 {routes && routes.length ? loaded() : loading()}
 
-            </div>
-            <div className="create-form">
-                <h2>Add a new route</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={newForm.color} name="color" placeholder="Color" onChange={handleChange} />
-                    <input type="text" value={newForm.wall} name="wall" placeholder="Wall" onChange={handleChange} />
-                    <input type="text" value={newForm.img} name="img" placeholder="https://" onChange={handleChange} />
-                    <input type="text" value={newForm.description} name="description" placeholder="Description" onChange={handleChange} />
-                    <input type="submit" value="Create Route" />
-                </form>
             </div>
         </>
  

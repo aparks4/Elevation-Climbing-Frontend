@@ -8,6 +8,7 @@ import { AuthProvider } from "../context/AuthContext";
 import Login from '../pages/Login';
 import ProtectedPage from '../utils/ProtectedPage';
 import Register from '../pages/Register';
+import VideoOptions from '../pages/VideoOptions';
 
 
 function Main() {
@@ -20,6 +21,7 @@ function Main() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/' element={<Home />} />
                 <Route path='/videos' element={<Dashboard />} />
+                <Route path='/videos/:id' element={<VideoOptions />} />
                 <Route path='/routes' element={<RouteIndex />} />
                 <Route path='/routes/:id' element={<RouteDetail />} />
                 <Route path='/protected' element={<ProtectedPage />} />

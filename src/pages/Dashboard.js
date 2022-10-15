@@ -22,7 +22,7 @@ function Dashboard(props) {
             console.log(err)
         }
     }
-
+    
     useEffect(() => {
         getVideos()
     }, [])
@@ -38,6 +38,7 @@ function Dashboard(props) {
                         Your browser does not surrport the video tag.
                     </video>
                     <p>{video.comment}</p>
+                    <a href={`/videos/${video.id}`}><button>Options</button></a>
                 </div>
             )
         })
