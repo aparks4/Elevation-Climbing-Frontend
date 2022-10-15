@@ -48,7 +48,8 @@ function RouteDetail() {
             body: body,
         });
         if (response.status === 201) {
-            navigate('/routes');
+            await getVideos();
+            navigate(`/routes/${id}`);
         } else {
             alert("Something went wrong!")
         }
@@ -57,8 +58,11 @@ function RouteDetail() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(user, formVideo, formComment, id);
-        createVideo();
+        console.log(id);
+        await createVideo();
+        setFormVideo(null);
+        setFormComment("");
+
         
     }
 

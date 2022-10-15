@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import AuthContext from '../context/AuthContext';
 
 function Dashboard(props) {
+    const { user } = useContext(AuthContext);
     const [videos, setVideos] = useState([])
     const URL = 'http://localhost:8000/videos/'
 
@@ -8,7 +10,13 @@ function Dashboard(props) {
         try {
             const response = await fetch(URL);
             const allVideos = await response.json()
-            setVideos(allVideos)
+            const userVideos = [];
+            for (let i = 0; i < allVideos.length; i++) {
+                if (allVideos[i].user === user.user_id) {
+                    userVideos.push(allVideos[i])
+                }
+            }
+            setVideos(userVideos)
             console.log('set videos')
         } catch(err) {
             console.log(err)
