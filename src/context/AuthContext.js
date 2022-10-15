@@ -73,6 +73,7 @@ export const AuthProvider = ({ children }) => {
         navigate('/');
     };
 
+
     const contextData = {
         user,
         setUser,
@@ -80,7 +81,7 @@ export const AuthProvider = ({ children }) => {
         setAuthTokens,
         registerUser,
         loginUser,
-        logoutUser
+        logoutUser, 
     };
 
     useEffect(() => {
