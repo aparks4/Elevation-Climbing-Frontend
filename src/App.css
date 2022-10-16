@@ -25,3 +25,137 @@ img {
   width: 250px;
   height: 250px;
 }
+.map-div {
+  width: 20px;
+  position: relative;
+}
+#gym-map {
+  height: 650px;
+  width: 730px;
+  background-image: url("https://i.imgur.com/QWmplAh.png");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  border-style: solid;
+}
+#one {
+  left: 40px;
+  top: 150px;
+}
+#two {
+  left: 35px;
+  top: 10px;
+}
+#three {
+  bottom: 144px;
+  left: 45px;
+}
+#four {
+  bottom: 236px;
+  left: 85px;
+}
+#five {
+  bottom: 300px;
+  left: 165px;
+}
+#six {
+  bottom: 407px;
+  left: 250px;
+}
+#seven {
+  bottom: 465px;
+  left: 350px;
+}
+#eight {
+  bottom: 532px;
+  left: 500px;
+
+}
+#nine {
+  bottom: 510px;
+  left: 610px;
+}
+#ten {
+  bottom: 567px;
+  left: 523px;
+}
+#eleven {
+  bottom: 660px;
+  left: 438px;
+}
+#twelve {
+  bottom: 743px;
+  left: 330px;
+}
+#thirteen {
+  bottom: 755px;
+  left: 233px;
+}
+#fourteen {
+  bottom: 790px;
+  left: 293px;
+}
+#fifteen {
+  bottom: 910px;
+  left: 385px;
+}
+#sixteen {
+  bottom: 940px;
+  left: 490px;
+}
+#seventeen {
+  bottom: 962px;
+  left: 393px;
+}
+#eighteen {
+  bottom: 1005px;
+  left: 390px;
+}
+#nineteen {
+  bottom: 1068px;
+  left: 585px;
+}
+#twenty {
+  bottom: 1100px;
+  left: 610px;
+}
+#twenty-one {
+  bottom: 1127px;
+  left: 587px;
+}
+#twenty-two {
+  bottom: 1050px;
+  left: 664px;
+}
+#twenty-three {
+  bottom: 1222px;
+  left: 600px;
+}
+#twenty-four {
+  bottom: 1284px;
+  left: 510px;
+}
+#twenty-five {
+  bottom: 1309px;
+  left: 476px;
+}
+#twenty-six {
+  bottom: 1340px;
+  left: 488px;
+}
+#twenty-seven {
+  bottom: 1365px;
+  left: 498px;
+}
+#twenty-eight {
+  bottom: 1638px;
+  left: 390px;
+}
+#twenty-nine {
+  bottom: 1770px;
+  left: 208px;
+}
+#thirty {
+  bottom: 2050px;
+  left: 146px;
+}

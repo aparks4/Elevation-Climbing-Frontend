@@ -40,6 +40,7 @@ function RouteDetail() {
     const createVideo = async () => {
         const body = new FormData();
         body.append('user', user.user_id);
+        body.append('username', user.username);
         body.append('video', formVideo);
         body.append('comment', formComment);
         body.append('route_id', id);
@@ -76,9 +77,7 @@ function RouteDetail() {
         return (
             <>
                 <div className="route-card">
-                    <h1>{route.color}{route.wall}</h1> 
-                    <img src={route.img} alt={route.color} />
-                    <p>{route.description}</p>
+                    <h1>{route.color}-{route.wall} Beta</h1> 
                 </div>
             </>
         )
@@ -101,7 +100,7 @@ function RouteDetail() {
                                 <source src={video.video} type="video/webm" />
                                 Your browser does not support the video tag.
                             </video>
-                            <p>{video.comment}</p>
+                            <p>{video.username}: {video.comment}</p>
                         </div>
                     )
                 }
@@ -109,6 +108,8 @@ function RouteDetail() {
             <form onSubmit={handleSubmit} encType='multipart/form-data' >
                 <label htmlFor='user'></label>
                 <input type="hidden" value={user.user_id} name="user" id='user' />
+                <label htmlFor='username'></label>
+                <input type="hidden" value={user.username} name="username" id='username' />
                 <label htmlFor='video'>Video</label>
                 <input type="file" src={formVideo} name="video" id='video' onChange={e => setFormVideo(e.target.files[0])} />
                 <label htmlFor='comment'>Caption</label>

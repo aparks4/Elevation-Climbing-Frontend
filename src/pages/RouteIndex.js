@@ -49,9 +49,9 @@ function RouteIndex(props) {
     return (
         <>
             <div className="route-index-container">
-                <img height='550' width='600' src='https://i.imgur.com/QWmplAh.png' alt='elevation gym map' />
-                {routes && routes.length ? loaded() : loading()}
 
+                {routes && routes.length ? loaded() : loading()}
+                
             </div>
         </>
  

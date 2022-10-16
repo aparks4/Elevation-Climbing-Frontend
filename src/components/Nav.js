@@ -13,8 +13,8 @@ function Nav() {
                     <>
                         <Link to='/'>Home</Link>
                         <Link to='/videos'>Dashboard</Link>
-                        <Link to='/protected'>Protected Page</Link>
-                        <Link to='/routes'>Routes</Link>
+                        <Link to='/map'>Find a Route</Link>
+                        <Link to='/routes'>All Routes</Link>
                         <button onClick={logoutUser}>Logout</button>
                     </>
                 ) : (

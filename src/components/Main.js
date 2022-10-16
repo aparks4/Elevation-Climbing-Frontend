@@ -9,6 +9,8 @@ import Login from '../pages/Login';
 import ProtectedPage from '../utils/ProtectedPage';
 import Register from '../pages/Register';
 import VideoOptions from '../pages/VideoOptions';
+import WallDetail from '../pages/WallDetail';
+import Map from '../pages/Map';
 
 
 function Main() {
@@ -21,8 +23,10 @@ function Main() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/' element={<Home />} />
                 <Route path='/videos' element={<Dashboard />} />
+                <Route path='/map' element={<Map />} />
                 <Route path='/videos/:id' element={<VideoOptions />} />
                 <Route path='/routes' element={<RouteIndex />} />
+                <Route path='/map/walls/:id' element={<WallDetail />} />
                 <Route path='/routes/:id' element={<RouteDetail />} />
                 <Route path='/protected' element={<ProtectedPage />} />
             </Routes>

@@ -22,7 +22,7 @@ function Dashboard(props) {
             console.log(err)
         }
     }
-    
+
     useEffect(() => {
         getVideos()
     }, [])
@@ -50,6 +50,7 @@ function Dashboard(props) {
 
     return (
         <>
+            <h1>Your Sends</h1>
             {videos && videos.length ? loaded() : loading()}
         </>
     )
