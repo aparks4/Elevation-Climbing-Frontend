@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 
 
-
 function RouteDetail() {
     const { user } = useContext(AuthContext);
     const [route, setRoute] = useState(null);
@@ -56,7 +55,6 @@ function RouteDetail() {
         }
     }
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(id);
@@ -66,7 +64,6 @@ function RouteDetail() {
 
         
     }
-
 
     useEffect(() => {
         getRoute();

@@ -8,7 +8,8 @@ function Home(props) {
 
 
     return (
-        <div>
+        <div className='home-container'>
+            <img src='https://i.imgur.com/n63Xycq.png' alt='Elevation logo' id='logo'></img>
             {user && <UserInfo user={user} />}
         </div>
     )

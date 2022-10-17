@@ -137,7 +137,7 @@ a {
 
 }
 .route-detail-container h1 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .route-detail-container form {
   height: 170px;
@@ -152,11 +152,11 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
-.scroll-videos {
+/* .scroll-videos {
   height: 550px;;
   overflow: scroll;
   overflow-x: hidden;
-}
+} */
 .login-form, .register-form {
   /* display: flex; */
   margin-top: 100px;
@@ -173,13 +173,36 @@ img {
   width: 250px;
   height: 250px;
 }
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+}
+.home-container h1 {
+  margin-left: 0px;
+}
+#logo {
+  height: 450px;
+  width: 520px;
+}
 .map-div {
   width: 20px;
   position: relative;
   color: black;
 }
+.map-div:hover {
+  color: #0083cc;
+  font-weight: bold;
+}
+.map-page-container h2 {
+  color: lightslategray;
+  margin-top: 100px;
+  text-align: center;
+}
 #gym-map {
-  height: 650px;
+  height: 660px;
   width: 730px;
   background-image: url("https://i.imgur.com/QWmplAh.png");
   background-position: center;
@@ -187,7 +210,7 @@ img {
   margin: auto;
   border-style: solid;
   color: black;
-  margin-top: 100px;
+  margin-top: 20px;
   text-align: center;
 }
 #one {
@@ -207,107 +230,107 @@ img {
   left: 85px;
 }
 #five {
-  bottom: 270px;
+  bottom: 280px;
   left: 165px;
 }
 #six {
-  bottom: 375px;
+  bottom: 385px;
   left: 250px;
 }
 #seven {
-  bottom: 430px;
+  bottom: 440px;
   left: 350px;
 }
 #eight {
-  bottom: 490px;
+  bottom: 503px;
   left: 500px;
 
 }
 #nine {
-  bottom: 460px;
+  bottom: 479px;
   left: 605px;
 }
 #ten {
-  bottom: 515px;
+  bottom: 535px;
   left: 523px;
 }
 #eleven {
-  bottom: 600px;
+  bottom: 625px;
   left: 440px;
 }
 #twelve {
-  bottom: 680px;
+  bottom: 705px;
   left: 330px;
 }
 #thirteen {
-  bottom: 695px;
+  bottom: 715px;
   left: 233px;
 }
 #fourteen {
-  bottom: 715px;
+  bottom: 743px;
   left: 293px;
 }
 #fifteen {
-  bottom: 830px;
+  bottom: 863px;
   left: 390px;
 }
 #sixteen {
-  bottom: 850px;
+  bottom: 890px;
   left: 490px;
 }
 #seventeen {
-  bottom: 873px;
+  bottom: 910px;
   left: 393px;
 }
 #eighteen {
-  bottom: 910px;
+  bottom: 950px;
   left: 390px;
 }
 #nineteen {
-  bottom: 965px;
+  bottom: 1010px;
   left: 585px;
 }
 #twenty {
-  bottom: 995px;
+  bottom: 1040px;
   left: 605px;
 }
 #twenty-one {
-  bottom: 1015px;
+  bottom: 1065px;
   left: 587px;
 }
 #twenty-two {
-  bottom: 940px;
+  bottom: 980px;
   left: 664px;
 }
 #twenty-three {
-  bottom: 1100px;
+  bottom: 1155px;
   left: 600px;
 }
 #twenty-four {
-  bottom: 1153px;
+  bottom: 1210px;
   left: 510px;
 }
 #twenty-five {
-  bottom: 1175px;
+  bottom: 1240px;
   left: 476px;
 }
 #twenty-six {
-  bottom: 1200px;
+  bottom: 1265px;
   left: 488px;
 }
 #twenty-seven {
-  bottom: 1220px;
+  bottom: 1285px;
   left: 498px;
 }
 #twenty-eight {
-  bottom: 1485px;
+  bottom: 1555px;
   left: 390px;
 }
 #twenty-nine {
-  bottom: 1615px;
+  bottom: 1685px;
   left: 208px;
 }
 #thirty {
-  bottom: 1890px;
+  bottom: 1960px;
   left: 146px;
 }
