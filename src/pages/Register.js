@@ -16,14 +16,20 @@ function Register() {
 
     return (
         <div className='register-form-container'>
-            <h1>Register</h1>
             <form onSubmit={handleSubmit} className='register-form'>
-                <label htmlFor='username'>Username</label>
-                <input type='text' id='username' onChange={e => setUsername(e.target.value)} placeholder='Username' required/>
-                <label htmlFor='password'>Password</label>
-                <input type='password' id='password' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
-                <label htmlFor='confirm-password'>Confirm Password</label>
-                <input type='password' id='confirm-password' onChange={e => setPassword2(e.target.value)} placeholder='Confirm Password' required/>
+                <h1>Sign Up</h1>
+                <div>
+                    <label htmlFor='username'>Username</label>
+                    <input type='text' id='username' onChange={e => setUsername(e.target.value)} placeholder='Username' required/>
+                </div>
+                <div>
+                    <label htmlFor='password'>Password</label>
+                    <input type='password' id='password' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
+                </div>
+                <div>
+                    <label htmlFor='confirm-password'>Confirm Password</label>
+                    <input type='password' id='confirm-password' onChange={e => setPassword2(e.target.value)} placeholder='Confirm Password' required/>
+                </div>
                 <p>{password2 !== password ? "Passwords do not match" : ""}</p>
                 <button type='submit'>Register</button>
             </form>

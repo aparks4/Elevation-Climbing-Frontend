@@ -15,11 +15,14 @@ function Login() {
         <div className='login-form-container'>
             <form onSubmit={handleSubmit} className='login-form'>
                 <h1>Login</h1>
-                <hr />
-                <label htmlFor='username'>Username</label>
-                <input type='text' id='username' placeholder='Enter Username' />
-                <label htmlFor='password'>Password</label>
-                <input type='password' id='password' placeholder='Enter Password' />
+                <div>
+                    <label htmlFor='username'>Username</label>
+                    <input type='text' id='username' placeholder='Enter Username' />
+                </div>
+                <div>
+                    <label htmlFor='password'>Password</label>
+                    <input type='password' id='password' placeholder='Enter Password' />
+                </div>
                 <button type='submit'>Login</button>
             </form>
         </div>

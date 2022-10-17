@@ -15,12 +15,11 @@ function Nav() {
                         <Link to='/videos'>Dashboard</Link>
                         <Link to='/map'>Find a Route</Link>
                         <Link to='/routes'>All Routes</Link>
-                        <button onClick={logoutUser}>Logout</button>
+                        <button onClick={logoutUser} id='logout-btn'>Logout</button>
                     </>
                 ) : (
                     <>
                         <Link to='/'>Home</Link>
-                        <Link to='/about'>About</Link>
                         <Link to='/login'>Login</Link>
                         <Link to='/register'>Register</Link>
                     </>

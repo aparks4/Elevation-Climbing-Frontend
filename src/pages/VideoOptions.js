@@ -60,8 +60,7 @@ function VideoOptions() {
 
     const loaded = () => {
         return (
-            <div>
-                <h1>Video Options</h1>
+            <div className="video-option-container">
                 <video width="320" height="240" controls>
                     <source src={video.video} type="video/mp4" />
                     <source src={video.video} type="video/ogg" />
@@ -69,20 +68,21 @@ function VideoOptions() {
                     Your browser does not support the video tag.
                 </video>
                 <div>
-                    <h2>Edit</h2>
                     <form onSubmit={updateVideo} encType='multipart/form-data' >
                         <label htmlFor='user'></label>
                         <input type="hidden" value={video.user} name="user" id='user' />
-                        <label htmlFor='video'>Video</label>
+                        <label htmlFor='video'>Edit Video File:</label>
                         <input type="file" src={formVideo} name="video" id='video' onChange={e => setFormVideo(e.target.files[0])} />
-                        <label htmlFor='comment'>Caption</label>
+                        <label htmlFor='comment'>Edit Caption:</label>
                         <input type="text" value={formComment} name="comment" id="comment" placeholder="Caption" onChange={e => setFormComment(e.target.value)} />
                         <label htmlFor='route_id'></label>
                         <input type="hidden" value={video.route_id} name="route_id" id="route_id" />
-                        <button type='submit'>Submit Changes</button>
+                        <div>
+                            <button type='submit'>Update</button>
+                            <button onClick={removeVideo} id="delete-button">Delete Video</button>
+                        </div>
                     </form>
                 </div>
-                <button onClick={removeVideo}>Delete</button>
             </div>
         )
     }

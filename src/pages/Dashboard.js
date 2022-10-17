@@ -37,8 +37,7 @@ function Dashboard(props) {
                         <source src={video.video} type="video/webm" />
                         Your browser does not surrport the video tag.
                     </video>
-                    <p>{video.comment}</p>
-                    <a href={`/videos/${video.id}`}><button>Options</button></a>
+                    <a href={`/videos/${video.id}`}><button id='detail-btn'>Details</button></a>
                 </div>
             )
         })
@@ -51,7 +50,9 @@ function Dashboard(props) {
     return (
         <>
             <h1>Your Sends</h1>
-            {videos && videos.length ? loaded() : loading()}
+            <div className="dashboard-videos">
+                {videos && videos.length ? loaded() : loading()}
+            </div>
         </>
     )
 }

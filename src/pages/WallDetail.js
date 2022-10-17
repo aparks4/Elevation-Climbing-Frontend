@@ -32,9 +32,8 @@ function WallDetail() {
             return (
                 <Link to={`/routes/${route.id}`}>
                 <div className="route-card">
-                    <h2>{route.color}{route.wall}</h2>
+                    <h2>{route.color}</h2>
                     <img alt={route.color} src={route.img} />
-                    <p>{route.description}</p>
                 </div>
                 </Link>
 

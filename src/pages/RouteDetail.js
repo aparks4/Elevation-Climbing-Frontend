@@ -88,7 +88,22 @@ function RouteDetail() {
     }
 
     return (
-        <>
+        <div className='route-detail-container'>
+            <form onSubmit={handleSubmit} encType='multipart/form-data' >
+                <h3>Post your video:</h3>
+                <label htmlFor='user'></label>
+                <input type="hidden" value={user.user_id} name="user" id='user' />
+                <label htmlFor='username'></label>
+                <input type="hidden" value={user.username} name="username" id='username' />
+                <label htmlFor='video'></label>
+                <input type="file" src={formVideo} name="video" id='video' onChange={e => setFormVideo(e.target.files[0])} />
+                <label htmlFor='comment'></label>
+                <input type="text" value={formComment} name="comment" id="comment" placeholder="Caption" onChange={e => setFormComment(e.target.value)} />
+                <label htmlFor='route_id'></label>
+                <input type="hidden" value={id} name="route_id" id="route_id" />
+                <button type='submit'>Post</button>
+            </form>
+        <div className='scroll-videos'>
             {route && videos? loaded() : loading()}
             {route && videos?.map((video) => {
                 if (video.route_id === route.id) {
@@ -100,26 +115,13 @@ function RouteDetail() {
                                 <source src={video.video} type="video/webm" />
                                 Your browser does not support the video tag.
                             </video>
-                            <p>{video.username}: {video.comment}</p>
+                                <p><span>{video.username}</span> {video.comment}</p>
                         </div>
                     )
                 }
             })} 
-            <form onSubmit={handleSubmit} encType='multipart/form-data' >
-                <label htmlFor='user'></label>
-                <input type="hidden" value={user.user_id} name="user" id='user' />
-                <label htmlFor='username'></label>
-                <input type="hidden" value={user.username} name="username" id='username' />
-                <label htmlFor='video'>Video</label>
-                <input type="file" src={formVideo} name="video" id='video' onChange={e => setFormVideo(e.target.files[0])} />
-                <label htmlFor='comment'>Caption</label>
-                <input type="text" value={formComment} name="comment" id="comment" placeholder="Caption" onChange={e => setFormComment(e.target.value)} />
-                <label htmlFor='route_id'></label>
-                <input type="hidden" value={id} name="route_id" id="route_id" />
-                <button type='submit'>Post Beta</button>
-            </form>
-    
-        </>
+            </div>
+        </div>
         
 
     )
