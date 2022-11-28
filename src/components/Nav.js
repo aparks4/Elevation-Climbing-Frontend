@@ -15,6 +15,7 @@ function Nav() {
                         <Link to='/videos'>Dashboard</Link>
                         <Link to='/map'>Find a Route</Link>
                         <Link to='/routes'>All Routes</Link>
+                        <Link to='/colors'>Beta by Color</Link>
                         <button onClick={logoutUser} id='logout-btn'>Logout</button>
                     </>
                 ) : (

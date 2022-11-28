@@ -11,6 +11,7 @@ import Register from '../pages/Register';
 import VideoOptions from '../pages/VideoOptions';
 import WallDetail from '../pages/WallDetail';
 import Map from '../pages/Map';
+import ColorMenu from '../pages/ColorMenu';
 
 
 function Main() {
@@ -29,6 +30,8 @@ function Main() {
                 <Route path='/map/walls/:id' element={<WallDetail />} />
                 <Route path='/routes/:id' element={<RouteDetail />} />
                 <Route path='/protected' element={<ProtectedPage />} />
+                <Route path='/colors' element={<ColorMenu />} />
+                <Route path='/colors/:id'  />
             </Routes>
         </>
     )
